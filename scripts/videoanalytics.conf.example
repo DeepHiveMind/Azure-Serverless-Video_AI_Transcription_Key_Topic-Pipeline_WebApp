@@ -1,0 +1,51 @@
+#=============================================================
+# Serverless Video Analytics Configuration file
+#=============================================================
+
+# Commons
+ResourceGroup="rg-videoanalytics"
+ResourceLocation="japaneast"
+
+# Functions App
+FunctionsAppName="videoanalyticsfunction"
+FunctionsAppConsumptionPlanLocation="japaneast"
+SasTokenAPIEndpoint="https://videoanalyticsfunction.azurewebsites.net/api/get-sas-token?code=xux1a3GJ3zBkb4n36PKQsnAkOBeZeCEgy2insTE4KfhoRqN1AtZLMw=="
+WebhookSubscribeAPIEndpoint="https://videoanalyticsfunction.azurewebsites.net/api/http-to-translator-queue?code=ScDWxSgQNasvYbM0Akkqe4k8o9p9KBxGALTKxKnmoR0ToKbuC95fDg=="
+
+# Logic App
+LogicAppName="videoanalyticslogic"
+
+# Web App
+WebUIAppName="videoanalyticsui"
+WebUIAppServicePlan="videoanalytics"
+
+# Azure Media Services
+AMSAADTenantDomain="microsoft.onmicrosoft.com"
+AMSRESTAPIEndpoint="https://videoanalyticsams.restv2.japaneast.media.azure.net/api/"
+AMSClientId="7a5d73fd-f122-492c-8402-080f9b1557x1"
+AMSClientSecret="c057e0db-b4aa-4d68-a1ab-5996bfe49a5a"
+
+# Storage Account attached to Azure Media Services
+AMSStorageAccountName="videoanalyticsams"
+AMSStorageAccountKey="inJZDazdj7/Jz8325KCggyTdxV4wGX04OgfXQTFWXpj77x9QZLRMSXuoM1p81QdbMUhC4uu/mC0T9OoAluEmCA=="
+
+# Storage Account for Video data source (you upload videos to this storage)
+SourceStorageAccountName="videoanalytics"
+SourceStorageAccountKey="v2PkwFoAjsWVjXkadzshKVqsDoHWEyZ6PPqL/UQNraCtW5fsDtio+MCAh9d7d/ecpIzDD5eE2/YvtH1cBNTIrAg=="
+VideoUploadingContainerName="uploads"
+
+# Cosmos DB
+CosmosDBAccountName="videoanalytics"
+CosmosDBAccountKey="j1EeL29LGjvUQQ9H1GKDCpegc8eOuQl1PoJwUduJkwSZd7h9rpU1B7EwoegnFQ2JnYDdmRfaJAYkmSgAGhuKbQ=="
+
+# Azure Search
+AzureSearchServiceName="videoanalytics"
+AzureSearchAdminKey="2A1C022AAC6C10F257CD8BFD8A61DACD"
+
+# Translator Text API (Cognitive Service)
+TranslatorAPIKey="91af7fedacb842f8b6740438842e875e"
+
+# Text Analytics API (Cognitive Services)
+TextAnalyticsAPISubscriptionKey="121354f204374c52af57e28c412b5493"
+# Location/Region name for your Text Analytics API account: "westus", "westeurope", "southeastasia", "eastus2", "westcentralus", etc
+TextAnalyticsAPILocation="westus"
